@@ -1,0 +1,63 @@
+# Development and build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+node_modules/
+.next/
+dist/
+build/
+
+# Environment and configuration
+.env
+.env.local
+.env.production
+.env.development
+config.py
+instance/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs and cache
+logs/
+*.log
+.cache/
+.pytest_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Landing pages (não aparecer no GitHub)
+LANDING-*/
+
+# Documentos internos/comerciais
+*DESENVOLVIMENTO*
+*ESTRATEGIA*
+*SETUP*
+*INTEGRATIONS*
+*PLANO*
+
+# Application specific
+uploads/
+exports/
+static/uploads/
