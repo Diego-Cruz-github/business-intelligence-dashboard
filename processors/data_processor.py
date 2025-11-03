@@ -43,7 +43,7 @@ class DataProcessor:
             analytics = self._generate_analytics(df_cleaned)
             
             # Prepare response with processed data
-            return {
+            response_data = {
                 "success": True,
                 "filename": filename,
                 "original_rows": len(df),
@@ -55,6 +55,9 @@ class DataProcessor:
                 "sample_data": df_cleaned.head(10).to_dict('records'),
                 "processing_time": datetime.now().isoformat()
             }
+            
+            # Convert NaN values to None for JSON serialization
+            return self._convert_nan_to_none(response_data)
             
         except Exception as e:
             logger.error(f"Processing failed for {filename}: {str(e)}")
@@ -83,19 +86,32 @@ class DataProcessor:
             raise
     
     def _process_csv(self, file_path: str) -> pd.DataFrame:
-        """Process CSV with intelligent encoding detection"""
-        for encoding in self.encoding_attempts:
-            try:
-                df = pd.read_csv(file_path, encoding=encoding)
-                logger.info(f"CSV loaded successfully with encoding: {encoding}")
-                return df
-            except UnicodeDecodeError:
-                continue
-            except Exception as e:
-                logger.error(f"CSV processing failed with {encoding}: {str(e)}")
-                continue
+        """Process CSV with intelligent encoding and separator detection"""
+        separators = [';', ',', '\t', '|']  # Try different separators
         
-        raise ValueError("Could not decode CSV file with any supported encoding")
+        for encoding in self.encoding_attempts:
+            for sep in separators:
+                try:
+                    df = pd.read_csv(file_path, encoding=encoding, sep=sep)
+                    
+                    # Check if we got meaningful columns (more than 1 column)
+                    if len(df.columns) > 1:
+                        logger.info(f"CSV loaded successfully with encoding: {encoding}, separator: '{sep}'")
+                        return df
+                        
+                except (UnicodeDecodeError, pd.errors.EmptyDataError):
+                    continue
+                except Exception as e:
+                    logger.warning(f"CSV processing failed with {encoding} and sep '{sep}': {str(e)}")
+                    continue
+        
+        # If all separators failed, try with default comma
+        try:
+            df = pd.read_csv(file_path, encoding='utf-8')
+            logger.warning("Falling back to default CSV reading")
+            return df
+        except Exception as e:
+            raise ValueError(f"Could not decode CSV file with any supported encoding/separator: {str(e)}")
     
     def _process_json(self, file_path: str) -> pd.DataFrame:
         """Process JSON with nested structure flattening"""
@@ -136,6 +152,9 @@ class DataProcessor:
         
         # Auto-detect and convert data types
         df_clean = self._auto_convert_types(df_clean)
+        
+        # Add calculated fields for inventory management
+        df_clean = self._add_calculated_fields(df_clean)
         
         # Remove duplicate rows
         initial_rows = len(df_clean)
@@ -244,8 +263,8 @@ class DataProcessor:
             analysis = {
                 "name": col,
                 "type": str(df[col].dtype),
-                "null_count": df[col].isnull().sum(),
-                "unique_count": df[col].nunique(),
+                "null_count": int(df[col].isnull().sum()),
+                "unique_count": int(df[col].nunique()),
                 "suggested_chart": self._suggest_chart_type(df[col])
             }
             
@@ -294,5 +313,98 @@ class DataProcessor:
             "numeric_columns": len(df.select_dtypes(include=[np.number]).columns),
             "datetime_columns": len(df.select_dtypes(include=['datetime64']).columns),
             "text_columns": len(df.select_dtypes(include=['object']).columns),
-            "missing_data_percentage": round((df.isnull().sum().sum() / (len(df) * len(df.columns))) * 100, 2)
+            "missing_data_percentage": round((df.isnull().sum().sum() / (len(df) * len(df.columns))) * 100, 2),
+            "potential_keys": self._detect_potential_keys(df),
+            "data_patterns": self._analyze_data_patterns(df)
         }
+    
+    def _detect_potential_keys(self, df: pd.DataFrame) -> List[str]:
+        """Detect columns that might be foreign keys or identifiers"""
+        potential_keys = []
+        
+        for col in df.columns:
+            col_lower = col.lower()
+            # Check for common key patterns
+            if any(pattern in col_lower for pattern in ['id_', '_id', 'codigo', 'key', 'ref']):
+                potential_keys.append(col)
+            # Check for high uniqueness ratio (potential identifier)
+            elif df[col].nunique() / len(df) > 0.8 and df[col].nunique() > 10:
+                potential_keys.append(col)
+        
+        return potential_keys
+    
+    def _analyze_data_patterns(self, df: pd.DataFrame) -> Dict[str, Any]:
+        """Analyze data patterns for dashboard suggestions"""
+        patterns = {
+            "geographical": [],
+            "temporal": [],
+            "categorical": [],
+            "metrics": []
+        }
+        
+        for col in df.columns:
+            col_lower = col.lower()
+            
+            # Geographical patterns
+            if any(geo in col_lower for geo in ['cidade', 'estado', 'regiao', 'pais', 'endereco', 'cep']):
+                patterns["geographical"].append(col)
+            
+            # Temporal patterns
+            elif any(temp in col_lower for temp in ['data', 'date', 'tempo', 'hora', 'ano', 'mes']):
+                patterns["temporal"].append(col)
+            
+            # Metrics (numeric columns that aren't IDs)
+            elif df[col].dtype in ['int64', 'float64'] and 'id' not in col_lower:
+                patterns["metrics"].append(col)
+            
+            # Categorical (text with limited unique values)
+            elif df[col].dtype == 'object' and df[col].nunique() < len(df) * 0.5:
+                patterns["categorical"].append(col)
+        
+        return patterns
+    
+    def _add_calculated_fields(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Add calculated fields based on business logic"""
+        df_calc = df.copy()
+        
+        # Calculate status_estoque dynamically for inventory data
+        if all(col in df_calc.columns for col in ['estoque_atual', 'estoque_minimo']):
+            def calculate_status_estoque(row):
+                if pd.isna(row['estoque_atual']) or pd.isna(row['estoque_minimo']):
+                    return 'DESCONHECIDO'
+                
+                estoque_atual = row['estoque_atual']
+                estoque_minimo = row['estoque_minimo']
+                
+                if estoque_atual <= estoque_minimo:
+                    return 'CRITICO'
+                elif estoque_atual <= estoque_minimo * 1.5:
+                    return 'BAIXO'
+                else:
+                    return 'OK'
+            
+            df_calc['status_estoque_calculado'] = df_calc.apply(calculate_status_estoque, axis=1)
+            logger.info("Campo 'status_estoque_calculado' adicionado baseado na lógica de negócio")
+        
+        # Calculate margem percentual if we have price data
+        if all(col in df_calc.columns for col in ['preco_varejo', 'preco_atacado']):
+            df_calc['margem_real_percentual'] = ((df_calc['preco_varejo'] - df_calc['preco_atacado']) / df_calc['preco_atacado'] * 100).round(2)
+            logger.info("Campo 'margem_real_percentual' calculado automaticamente")
+        
+        # Calculate percentage of stock if we have estoque data
+        if all(col in df_calc.columns for col in ['estoque_atual', 'estoque_minimo', 'estoque_maximo']):
+            df_calc['percentual_estoque'] = (df_calc['estoque_atual'] / df_calc['estoque_maximo'] * 100).round(1)
+            logger.info("Campos de análise de estoque calculados automaticamente")
+        
+        return df_calc
+    
+    def _convert_nan_to_none(self, obj):
+        """Convert NaN values to None for JSON serialization"""
+        if isinstance(obj, dict):
+            return {k: self._convert_nan_to_none(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [self._convert_nan_to_none(item) for item in obj]
+        elif pd.isna(obj):
+            return None
+        else:
+            return obj
