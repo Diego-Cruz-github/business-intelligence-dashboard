@@ -53,6 +53,20 @@ function App() {
     }
   };
 
+  const handleGenerateDashboard = async () => {
+    try {
+      const response = await fetch(`${API_BASE}/api/generate-interactive-dashboard`);
+      if (response.ok) {
+        const dashboardResult = await response.json();
+        setDashboardData(dashboardResult);
+      } else {
+        console.error('Failed to generate dashboard');
+      }
+    } catch (error) {
+      console.error('Error generating dashboard:', error);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -139,6 +153,7 @@ function App() {
               setUploadedData(null);
               setDashboardData(null);
             }}
+            onGenerateDashboard={handleGenerateDashboard}
           />
         )}
       </main>

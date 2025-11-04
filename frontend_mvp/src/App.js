@@ -237,12 +237,36 @@ function App() {
           <ChartCard title="Vendas por Cidade" subtitle="Distribuição geográfica das vendas" actions={false}>
             <Chart
               options={{
-                chart: { type: 'donut', toolbar: { show: false } },
+                chart: { 
+                  type: 'donut', 
+                  toolbar: { show: false },
+                  background: 'transparent'
+                },
                 labels: Object.keys(dashboard.vendas_por_regiao),
-                colors: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'],
+                colors: ['#2563eb', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316', '#84cc16'],
                 legend: { position: 'bottom' },
                 dataLabels: { enabled: true, formatter: (val) => val.toFixed(1) + '%' },
-                plotOptions: { pie: { donut: { size: '60%' } } },
+                plotOptions: { 
+                  pie: { 
+                    donut: { size: '60%' },
+                    expandOnClick: false
+                  } 
+                },
+                states: {
+                  hover: {
+                    filter: {
+                      type: 'lighten',
+                      value: 0.1
+                    }
+                  },
+                  active: {
+                    allowMultipleDataPointsSelection: false,
+                    filter: {
+                      type: 'darken',
+                      value: 0.7
+                    }
+                  }
+                },
                 responsive: [{ breakpoint: 480, options: { chart: { width: 300 } } }]
               }}
               series={Object.values(dashboard.vendas_por_regiao).map(val => 

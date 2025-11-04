@@ -1,0 +1,31 @@
+Data,Produto,Categoria,Vendas,Receita,Margem,Cliente,Vendedor,Região,Canal
+2024-01-15,Notebook Dell,Tecnologia,50,75000,25.5,Empresa A,João Silva,Sudeste,Online
+2024-01-16,Mouse Wireless,Tecnologia,150,4500,35.2,Empresa B,Maria Santos,Sul,Loja Física
+2024-01-17,Teclado Mecânico,Tecnologia,75,11250,42.1,Empresa C,Carlos Lima,Nordeste,Online
+2024-01-18,Monitor 24",Tecnologia,30,18000,28.3,Empresa D,Ana Costa,Norte,Televendas
+2024-01-19,Webcam HD,Tecnologia,200,10000,45.6,Empresa E,Pedro Oliveira,Centro-Oeste,Online
+2024-01-20,Headset Gamer,Tecnologia,85,8500,38.9,Empresa F,Julia Mendes,Sudeste,Loja Física
+2024-01-21,SSD 1TB,Tecnologia,120,24000,32.4,Empresa G,Rafael Torres,Sul,Online
+2024-01-22,Placa de Vídeo,Tecnologia,25,37500,22.7,Empresa H,Fernanda Castro,Nordeste,Televendas
+2024-01-23,Processador Intel,Tecnologia,40,32000,29.8,Empresa I,Lucas Rocha,Norte,Online
+2024-01-24,Memoria RAM 16GB,Tecnologia,90,13500,34.1,Empresa J,Camila Souza,Centro-Oeste,Loja Física
+2024-02-01,Smartphone Samsung,Móveis,180,108000,31.5,Cliente A,João Silva,Sudeste,Online
+2024-02-02,Tablet iPad,Móveis,65,52000,27.3,Cliente B,Maria Santos,Sul,Loja Física
+2024-02-03,Fone Bluetooth,Móveis,220,11000,43.2,Cliente C,Carlos Lima,Nordeste,Online
+2024-02-04,Carregador Wireless,Móveis,130,3900,38.7,Cliente D,Ana Costa,Norte,Televendas
+2024-02-05,Case iPhone,Móveis,350,7000,52.1,Cliente E,Pedro Oliveira,Centro-Oeste,Online
+2024-02-06,Power Bank,Móveis,160,12800,35.8,Cliente F,Julia Mendes,Sudeste,Loja Física
+2024-02-07,Smartwatch,Móveis,95,47500,28.9,Cliente G,Rafael Torres,Sul,Online
+2024-02-08,AirPods Pro,Móveis,110,27500,26.4,Cliente H,Fernanda Castro,Nordeste,Televendas
+2024-02-09,Cabo USB-C,Móveis,400,4000,48.5,Cliente I,Lucas Rocha,Norte,Online
+2024-02-10,Suporte Celular,Móveis,185,1850,44.3,Cliente J,Camila Souza,Centro-Oeste,Loja Física
+2024-03-01,Mesa Gamer,Casa,45,22500,24.6,Casa A,João Silva,Sudeste,Online
+2024-03-02,Cadeira Escritório,Casa,32,16000,29.1,Casa B,Maria Santos,Sul,Loja Física
+2024-03-03,Luminária LED,Casa,120,6000,41.7,Casa C,Carlos Lima,Nordeste,Online
+2024-03-04,Ventilador Torre,Casa,80,8000,33.2,Casa D,Ana Costa,Norte,Televendas
+2024-03-05,Purificador Ar,Casa,25,12500,27.8,Casa E,Pedro Oliveira,Centro-Oeste,Online
+2024-03-06,Umidificador,Casa,60,3600,39.4,Casa F,Julia Mendes,Sudeste,Loja Física
+2024-03-07,Aspirador Robô,Casa,18,27000,21.3,Casa G,Rafael Torres,Sul,Online
+2024-03-08,Cafeteira Expresso,Casa,35,17500,26.7,Casa H,Fernanda Castro,Nordeste,Televendas
+2024-03-09,Micro-ondas Smart,Casa,28,22400,23.9,Casa I,Lucas Rocha,Norte,Online
+2024-03-10,Geladeira Frost Free,Casa,12,18000,19.5,Casa J,Camila Souza,Centro-Oeste,Loja Física

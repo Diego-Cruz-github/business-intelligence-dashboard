@@ -1,0 +1,157 @@
+{
+  "spreadsheetId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms",
+  "title": "Métricas Operacionais - DataHub Analytics",
+  "sheets": [
+    {
+      "properties": {
+        "title": "Dashboard Executivo",
+        "sheetId": 0
+      },
+      "data": [
+        {
+          "rowData": [
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Indicador"}},
+                {"userEnteredValue": {"stringValue": "Valor Atual"}},
+                {"userEnteredValue": {"stringValue": "Período Anterior"}},
+                {"userEnteredValue": {"stringValue": "Tendência"}},
+                {"userEnteredValue": {"stringValue": "Último Update"}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Usuários Ativos Mensais"}},
+                {"userEnteredValue": {"numberValue": 12847}},
+                {"userEnteredValue": {"numberValue": 11892}},
+                {"userEnteredValue": {"stringValue": "↗️ +8.0%"}},
+                {"userEnteredValue": {"stringValue": "2024-11-02 14:30"}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Taxa de Conversão"}},
+                {"userEnteredValue": {"numberValue": 3.2}},
+                {"userEnteredValue": {"numberValue": 2.9}},
+                {"userEnteredValue": {"stringValue": "↗️ +10.3%"}},
+                {"userEnteredValue": {"stringValue": "2024-11-02 14:25"}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Receita Total (R$)"}},
+                {"userEnteredValue": {"numberValue": 245000}},
+                {"userEnteredValue": {"numberValue": 230000}},
+                {"userEnteredValue": {"stringValue": "↗️ +6.5%"}},
+                {"userEnteredValue": {"stringValue": "2024-11-02 14:20"}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Satisfação do Cliente"}},
+                {"userEnteredValue": {"numberValue": 4.8}},
+                {"userEnteredValue": {"numberValue": 4.6}},
+                {"userEnteredValue": {"stringValue": "↗️ +4.3%"}},
+                {"userEnteredValue": {"stringValue": "2024-11-02 14:15"}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Tempo Médio de Resposta (ms)"}},
+                {"userEnteredValue": {"numberValue": 85}},
+                {"userEnteredValue": {"numberValue": 120}},
+                {"userEnteredValue": {"stringValue": "↘️ -29.2%"}},
+                {"userEnteredValue": {"stringValue": "2024-11-02 14:35"}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Uptime do Sistema (%)"}},
+                {"userEnteredValue": {"numberValue": 99.97}},
+                {"userEnteredValue": {"numberValue": 99.85}},
+                {"userEnteredValue": {"stringValue": "↗️ +0.12%"}},
+                {"userEnteredValue": {"stringValue": "2024-11-02 14:40"}}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "title": "Analytics Avançado",
+        "sheetId": 1
+      },
+      "data": [
+        {
+          "rowData": [
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "Período"}},
+                {"userEnteredValue": {"stringValue": "Page Views"}},
+                {"userEnteredValue": {"stringValue": "Unique Visitors"}},
+                {"userEnteredValue": {"stringValue": "Bounce Rate"}},
+                {"userEnteredValue": {"stringValue": "Avg Session Duration"}},
+                {"userEnteredValue": {"stringValue": "Goals Completed"}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "2024-10-01"}},
+                {"userEnteredValue": {"numberValue": 25847}},
+                {"userEnteredValue": {"numberValue": 18234}},
+                {"userEnteredValue": {"numberValue": 32.5}},
+                {"userEnteredValue": {"stringValue": "00:03:45"}},
+                {"userEnteredValue": {"numberValue": 1847}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "2024-10-02"}},
+                {"userEnteredValue": {"numberValue": 28945}},
+                {"userEnteredValue": {"numberValue": 19876}},
+                {"userEnteredValue": {"numberValue": 28.7}},
+                {"userEnteredValue": {"stringValue": "00:04:12"}},
+                {"userEnteredValue": {"numberValue": 2134}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "2024-10-03"}},
+                {"userEnteredValue": {"numberValue": 31204}},
+                {"userEnteredValue": {"numberValue": 21567}},
+                {"userEnteredValue": {"numberValue": 25.9}},
+                {"userEnteredValue": {"stringValue": "00:04:38"}},
+                {"userEnteredValue": {"numberValue": 2487}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "2024-10-04"}},
+                {"userEnteredValue": {"numberValue": 27892}},
+                {"userEnteredValue": {"numberValue": 19023}},
+                {"userEnteredValue": {"numberValue": 30.1}},
+                {"userEnteredValue": {"stringValue": "00:03:52"}},
+                {"userEnteredValue": {"numberValue": 1923}}
+              ]
+            },
+            {
+              "values": [
+                {"userEnteredValue": {"stringValue": "2024-10-05"}},
+                {"userEnteredValue": {"numberValue": 33765}},
+                {"userEnteredValue": {"numberValue": 23456}},
+                {"userEnteredValue": {"numberValue": 22.3}},
+                {"userEnteredValue": {"stringValue": "00:05:15"}},
+                {"userEnteredValue": {"numberValue": 2876}}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lastUpdate": "2024-11-02T14:45:00Z",
+  "source": "Google Sheets API v4",
+  "dataQuality": "excellent",
+  "refreshRate": "real-time"
+}

@@ -1,0 +1,62 @@
+Categoria,Subcategoria,Metrica,Valor_Atual,Meta,Periodo_Anterior,Variacao_Percentual,Benchmark_Mercado,Unidade,Data_Atualizacao,Status,Responsavel,Frequencia_Medicao
+Financial,Revenue,Monthly Recurring Revenue (MRR),285833,275000,268500,6.5,250000,BRL,2024-11-02 14:30,Above Target,CFO,Daily
+Financial,Revenue,Annual Recurring Revenue (ARR),3430000,3300000,3222000,6.5,3000000,BRL,2024-11-02 14:30,Above Target,CFO,Daily
+Financial,Revenue,Revenue Growth Rate,18.2,15.0,16.8,8.3,12.5,Percentage,2024-11-02 14:30,Above Target,CFO,Monthly
+Financial,Profitability,Gross Margin,67.5,65.0,65.8,2.6,62.0,Percentage,2024-11-02 14:30,Above Target,CFO,Monthly
+Financial,Profitability,EBITDA Margin,32.1,30.0,29.8,7.7,25.0,Percentage,2024-11-02 14:30,Above Target,CFO,Monthly
+Financial,Profitability,Net Profit Margin,18.9,17.0,17.2,9.9,15.0,Percentage,2024-11-02 14:30,Above Target,CFO,Monthly
+Financial,Cash Flow,Operating Cash Flow,485000,450000,425000,14.1,400000,BRL,2024-11-02 14:30,Above Target,CFO,Monthly
+Financial,Cash Flow,Free Cash Flow,285000,250000,245000,16.3,220000,BRL,2024-11-02 14:30,Above Target,CFO,Monthly
+Financial,Cash Flow,Cash Burn Rate,125000,150000,135000,-7.4,160000,BRL,2024-11-02 14:30,Below Target,CFO,Monthly
+Financial,Cash Flow,Runway Months,28,24,26,7.7,20,Months,2024-11-02 14:30,Above Target,CFO,Monthly
+Customer,Acquisition,Customer Acquisition Cost (CAC),1250,1500,1380,-9.4,1650,BRL,2024-11-02 14:30,Below Target,CMO,Weekly
+Customer,Acquisition,Cost per Lead (CPL),85,100,92,-7.6,120,BRL,2024-11-02 14:30,Below Target,CMO,Daily
+Customer,Acquisition,Lead Conversion Rate,12.8,10.0,11.5,13.0,8.5,Percentage,2024-11-02 14:30,Above Target,CMO,Daily
+Customer,Acquisition,Sales Cycle Length,32,45,38,-15.8,50,Days,2024-11-02 14:30,Below Target,Sales Director,Weekly
+Customer,Retention,Customer Lifetime Value (LTV),8750,8000,8200,6.7,7500,BRL,2024-11-02 14:30,Above Target,CSM Director,Monthly
+Customer,Retention,Churn Rate,2.8,3.5,3.2,-12.5,4.2,Percentage,2024-11-02 14:30,Below Target,CSM Director,Monthly
+Customer,Retention,Net Revenue Retention,118,115,116,1.7,110,Percentage,2024-11-02 14:30,Above Target,CSM Director,Monthly
+Customer,Retention,Customer Satisfaction Score,4.8,4.5,4.6,4.3,4.3,Rating,2024-11-02 14:30,Above Target,CSM Director,Weekly
+Customer,Retention,Net Promoter Score (NPS),72,65,68,5.9,58,Score,2024-11-02 14:30,Above Target,CSM Director,Monthly
+Customer,Engagement,Daily Active Users (DAU),8950,8500,8200,9.1,7500,Users,2024-11-02 14:30,Above Target,Product Manager,Daily
+Customer,Engagement,Monthly Active Users (MAU),12847,12000,11892,8.0,11000,Users,2024-11-02 14:30,Above Target,Product Manager,Daily
+Customer,Engagement,Session Duration,245,300,268,-8.6,180,Seconds,2024-11-02 14:30,Below Target,Product Manager,Daily
+Customer,Engagement,Feature Adoption Rate,68.5,65.0,64.2,6.7,55.0,Percentage,2024-11-02 14:30,Above Target,Product Manager,Weekly
+Sales,Performance,Monthly Sales Target Achievement,112.5,100.0,108.2,4.0,95.0,Percentage,2024-11-02 14:30,Above Target,Sales Director,Daily
+Sales,Performance,Average Deal Size,15850,15000,14200,11.6,12000,BRL,2024-11-02 14:30,Above Target,Sales Director,Weekly
+Sales,Performance,Sales Velocity,385,350,365,5.5,300,BRL/Day,2024-11-02 14:30,Above Target,Sales Director,Weekly
+Sales,Performance,Win Rate,28.5,25.0,26.8,6.3,22.0,Percentage,2024-11-02 14:30,Above Target,Sales Director,Weekly
+Sales,Performance,Pipeline Value,2850000,2500000,2650000,7.5,2200000,BRL,2024-11-02 14:30,Above Target,Sales Director,Daily
+Sales,Productivity,Calls per Rep per Day,45,40,42,7.1,35,Calls,2024-11-02 14:30,Above Target,Sales Manager,Daily
+Sales,Productivity,Meetings Booked per Rep,12,10,11,9.1,8,Meetings,2024-11-02 14:30,Above Target,Sales Manager,Daily
+Sales,Productivity,Revenue per Rep,185000,175000,178000,4.0,165000,BRL,2024-11-02 14:30,Above Target,Sales Director,Monthly
+Marketing,Digital,Cost per Click (CPC),3.85,4.50,4.12,-6.6,5.20,BRL,2024-11-02 14:30,Below Target,Digital Marketing,Daily
+Marketing,Digital,Click Through Rate (CTR),2.8,2.2,2.5,12.0,1.8,Percentage,2024-11-02 14:30,Above Target,Digital Marketing,Daily
+Marketing,Digital,Return on Ad Spend (ROAS),4.2,3.5,3.8,10.5,3.2,Ratio,2024-11-02 14:30,Above Target,Digital Marketing,Daily
+Marketing,Digital,Cost per Acquisition (CPA),285,350,320,-10.9,420,BRL,2024-11-02 14:30,Below Target,Digital Marketing,Daily
+Marketing,Content,Organic Traffic Growth,15.8,12.0,13.2,19.7,8.5,Percentage,2024-11-02 14:30,Above Target,Content Manager,Weekly
+Marketing,Content,Blog Conversion Rate,3.2,2.5,2.8,14.3,2.0,Percentage,2024-11-02 14:30,Above Target,Content Manager,Weekly
+Marketing,Content,Email Open Rate,28.5,25.0,26.8,6.3,22.0,Percentage,2024-11-02 14:30,Above Target,Email Marketing,Daily
+Marketing,Content,Email Click Rate,4.8,4.0,4.2,14.3,3.5,Percentage,2024-11-02 14:30,Above Target,Email Marketing,Daily
+Marketing,Social,Social Media Engagement Rate,6.8,5.5,6.2,9.7,4.2,Percentage,2024-11-02 14:30,Above Target,Social Media Manager,Daily
+Marketing,Social,Social Media Reach,185000,150000,165000,12.1,120000,Impressions,2024-11-02 14:30,Above Target,Social Media Manager,Daily
+Operations,Technology,System Uptime,99.97,99.90,99.85,0.12,99.50,Percentage,2024-11-02 14:30,Above Target,DevOps Lead,Real-time
+Operations,Technology,API Response Time,85,150,120,-29.2,200,Milliseconds,2024-11-02 14:30,Below Target,DevOps Lead,Real-time
+Operations,Technology,Error Rate,0.15,0.50,0.28,-46.4,1.00,Percentage,2024-11-02 14:30,Below Target,DevOps Lead,Real-time
+Operations,Technology,Database Query Performance,12,20,18,-33.3,25,Milliseconds,2024-11-02 14:30,Below Target,DevOps Lead,Real-time
+Operations,Support,First Response Time,45,120,85,-47.1,180,Minutes,2024-11-02 14:30,Below Target,Support Manager,Real-time
+Operations,Support,Resolution Time,4.2,8.0,6.5,-35.4,12.0,Hours,2024-11-02 14:30,Below Target,Support Manager,Daily
+Operations,Support,Customer Satisfaction (Support),4.7,4.3,4.5,4.4,4.0,Rating,2024-11-02 14:30,Above Target,Support Manager,Daily
+Operations,Support,Ticket Volume,285,400,320,-10.9,500,Tickets,2024-11-02 14:30,Below Target,Support Manager,Daily
+HR,Performance,Employee Satisfaction,4.6,4.2,4.4,4.5,4.0,Rating,2024-11-02 14:30,Above Target,HR Director,Quarterly
+HR,Performance,Employee Net Promoter Score (eNPS),58,45,52,11.5,35,Score,2024-11-02 14:30,Above Target,HR Director,Quarterly
+HR,Performance,Employee Retention Rate,94.5,92.0,93.2,1.4,88.0,Percentage,2024-11-02 14:30,Above Target,HR Director,Monthly
+HR,Performance,Time to Hire,28,35,32,-12.5,42,Days,2024-11-02 14:30,Below Target,HR Manager,Monthly
+HR,Performance,Training Hours per Employee,28,24,25,12.0,20,Hours,2024-11-02 14:30,Above Target,HR Manager,Monthly
+HR,Performance,Revenue per Employee,185000,175000,178000,4.0,165000,BRL,2024-11-02 14:30,Above Target,HR Director,Monthly
+Financial,Efficiency,Operating Expense Ratio,68.5,70.0,71.2,-3.8,72.0,Percentage,2024-11-02 14:30,Below Target,COO,Monthly
+Financial,Efficiency,R&D as % of Revenue,15.2,18.0,16.5,-7.9,20.0,Percentage,2024-11-02 14:30,Below Target,CTO,Monthly
+Financial,Efficiency,Sales & Marketing as % of Revenue,38.5,40.0,39.8,-3.3,45.0,Percentage,2024-11-02 14:30,Below Target,CMO,Monthly
+Financial,Risk,Debt to Equity Ratio,0.35,0.50,0.42,-16.7,0.65,Ratio,2024-11-02 14:30,Below Target,CFO,Monthly
+Financial,Risk,Current Ratio,2.8,2.0,2.5,12.0,1.5,Ratio,2024-11-02 14:30,Above Target,CFO,Monthly
+Financial,Risk,Quick Ratio,2.2,1.5,1.9,15.8,1.2,Ratio,2024-11-02 14:30,Above Target,CFO,Monthly

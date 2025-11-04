@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <worksheet ss:Name="Relatório Financeiro Q1 2024">
+    <table>
+      <row>
+        <cell><data ss:Type="String">Período</data></cell>
+        <cell><data ss:Type="String">Receita Total</data></cell>
+        <cell><data ss:Type="String">Custos</data></cell>
+        <cell><data ss:Type="String">Lucro Bruto</data></cell>
+        <cell><data ss:Type="String">Margem %</data></cell>
+        <cell><data ss:Type="String">EBITDA</data></cell>
+        <cell><data ss:Type="String">Impostos</data></cell>
+        <cell><data ss:Type="String">Lucro Líquido</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Janeiro 2024</data></cell>
+        <cell><data ss:Type="Number">245000</data></cell>
+        <cell><data ss:Type="Number">156800</data></cell>
+        <cell><data ss:Type="Number">88200</data></cell>
+        <cell><data ss:Type="Number">36.0</data></cell>
+        <cell><data ss:Type="Number">75400</data></cell>
+        <cell><data ss:Type="Number">22560</data></cell>
+        <cell><data ss:Type="Number">52840</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Fevereiro 2024</data></cell>
+        <cell><data ss:Type="Number">287500</data></cell>
+        <cell><data ss:Type="Number">181125</data></cell>
+        <cell><data ss:Type="Number">106375</data></cell>
+        <cell><data ss:Type="Number">37.0</data></cell>
+        <cell><data ss:Type="Number">92100</data></cell>
+        <cell><data ss:Type="Number">27630</data></cell>
+        <cell><data ss:Type="Number">64470</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Março 2024</data></cell>
+        <cell><data ss:Type="Number">325000</data></cell>
+        <cell><data ss:Type="Number">201500</data></cell>
+        <cell><data ss:Type="Number">123500</data></cell>
+        <cell><data ss:Type="Number">38.0</data></cell>
+        <cell><data ss:Type="Number">108650</data></cell>
+        <cell><data ss:Type="Number">32595</data></cell>
+        <cell><data ss:Type="Number">76055</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Q1 Total</data></cell>
+        <cell><data ss:Type="Number">857500</data></cell>
+        <cell><data ss:Type="Number">539425</data></cell>
+        <cell><data ss:Type="Number">318075</data></cell>
+        <cell><data ss:Type="Number">37.1</data></cell>
+        <cell><data ss:Type="Number">276150</data></cell>
+        <cell><data ss:Type="Number">82785</data></cell>
+        <cell><data ss:Type="Number">193365</data></cell>
+      </row>
+    </table>
+  </worksheet>
+  <worksheet ss:Name="KPIs Principais">
+    <table>
+      <row>
+        <cell><data ss:Type="String">Métrica</data></cell>
+        <cell><data ss:Type="String">Valor Atual</data></cell>
+        <cell><data ss:Type="String">Meta</data></cell>
+        <cell><data ss:Type="String">Variação %</data></cell>
+        <cell><data ss:Type="String">Status</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Receita Mensal Recorrente (MRR)</data></cell>
+        <cell><data ss:Type="Number">285833</data></cell>
+        <cell><data ss:Type="Number">275000</data></cell>
+        <cell><data ss:Type="Number">3.9</data></cell>
+        <cell><data ss:Type="String">✅ Acima da Meta</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Customer Acquisition Cost (CAC)</data></cell>
+        <cell><data ss:Type="Number">1250</data></cell>
+        <cell><data ss:Type="Number">1500</data></cell>
+        <cell><data ss:Type="Number">-16.7</data></cell>
+        <cell><data ss:Type="String">✅ Abaixo da Meta</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Lifetime Value (LTV)</data></cell>
+        <cell><data ss:Type="Number">8750</data></cell>
+        <cell><data ss:Type="Number">8000</data></cell>
+        <cell><data ss:Type="Number">9.4</data></cell>
+        <cell><data ss:Type="String">✅ Acima da Meta</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Taxa de Churn</data></cell>
+        <cell><data ss:Type="Number">2.8</data></cell>
+        <cell><data ss:Type="Number">3.5</data></cell>
+        <cell><data ss:Type="Number">-20.0</data></cell>
+        <cell><data ss:Type="String">✅ Abaixo da Meta</data></cell>
+      </row>
+      <row>
+        <cell><data ss:Type="String">Net Promoter Score (NPS)</data></cell>
+        <cell><data ss:Type="Number">72</data></cell>
+        <cell><data ss:Type="Number">65</data></cell>
+        <cell><data ss:Type="Number">10.8</data></cell>
+        <cell><data ss:Type="String">✅ Acima da Meta</data></cell>
+      </row>
+    </table>
+  </worksheet>
+</workbook>

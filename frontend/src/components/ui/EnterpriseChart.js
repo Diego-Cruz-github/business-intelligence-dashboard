@@ -214,9 +214,9 @@ const EnterpriseChart = ({
   // Get data quality indicator
   const getQualityConfig = () => {
     const configs = {
-      excellent: { color: 'text-green-600', bg: 'bg-green-50', text: 'Excellent' },
-      good: { color: 'text-blue-600', bg: 'bg-blue-50', text: 'Good' },
-      'needs-attention': { color: 'text-yellow-600', bg: 'bg-yellow-50', text: 'Needs Attention' }
+      excellent: { color: 'text-green-600', bg: 'bg-green-50', text: 'Excelente' },
+      good: { color: 'text-blue-600', bg: 'bg-blue-50', text: 'Bom' },
+      'needs-attention': { color: 'text-yellow-600', bg: 'bg-yellow-50', text: 'Requer Atenção' }
     };
     return configs[dataQuality] || configs.good;
   };
@@ -270,7 +270,7 @@ const EnterpriseChart = ({
 
           {/* Last Update */}
           <span className="dh-caption">
-            Updated {lastUpdate.toLocaleTimeString()}
+            Atualizado às {lastUpdate.toLocaleTimeString('pt-BR')}
           </span>
         </div>
       </div>
@@ -288,9 +288,9 @@ const EnterpriseChart = ({
       {/* Chart Footer */}
       <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
         <div className="flex items-center space-x-4">
-          <span>Data points: {data?.labels?.length || 0}</span>
+          <span>Pontos de dados: {data?.labels?.length || 0}</span>
           {onDataPointClick && (
-            <span className="text-blue-600">Click points for details</span>
+            <span className="text-blue-600">Clique nos pontos para detalhes</span>
           )}
         </div>
         <div className="flex items-center space-x-2">
@@ -298,7 +298,7 @@ const EnterpriseChart = ({
             className="dh-btn-secondary text-xs"
             onClick={() => {/* Export functionality */}}
           >
-            Export
+            Exportar
           </button>
         </div>
       </div>

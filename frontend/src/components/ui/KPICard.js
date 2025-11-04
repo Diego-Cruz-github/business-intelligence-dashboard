@@ -137,7 +137,7 @@ const KPICard = ({
             </span>
           </div>
           <span className="dh-caption text-gray-500">
-            vs previous period
+            vs período anterior
           </span>
         </div>
       )}

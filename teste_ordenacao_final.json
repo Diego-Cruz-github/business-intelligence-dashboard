@@ -1,0 +1,382 @@
+{
+  "canais": {
+    "Atacado": {
+      "ticket_medio": "R$ 22,207.24",
+      "total": "R$ 644,010.00",
+      "transacoes": 29
+    },
+    "Varejo": {
+      "ticket_medio": "R$ 3,315.52",
+      "total": "R$ 96,150.00",
+      "transacoes": 29
+    }
+  },
+  "dados_raw": {
+    "preview": [
+      {
+        "cidade_filial": "Sao Paulo",
+        "cliente_lojista": "TechMundo Informatica",
+        "data_venda": "15/01/2024",
+        "estado": "SP",
+        "id_filial": "FIL001",
+        "id_produto": "PROD001",
+        "nome_produto": "Notebook Dell Inspiron 15",
+        "preco_unitario": 2100.0,
+        "quantidade": 20,
+        "regiao": "Sudeste",
+        "valor_total": 42000.0,
+        "vendedor_responsavel": "Carlos Mendes"
+      },
+      {
+        "cidade_filial": "Rio de Janeiro",
+        "cliente_lojista": "InfoTech Store",
+        "data_venda": "20/01/2024",
+        "estado": "RJ",
+        "id_filial": "FIL002",
+        "id_produto": "PROD002",
+        "nome_produto": "Desktop HP Pavilion",
+        "preco_unitario": 1100.0,
+        "quantidade": 15,
+        "regiao": "Sudeste",
+        "valor_total": 16500.0,
+        "vendedor_responsavel": "Ana Rodrigues"
+      },
+      {
+        "cidade_filial": "Belo Horizonte",
+        "cliente_lojista": "Digital House",
+        "data_venda": "25/01/2024",
+        "estado": "MG",
+        "id_filial": "FIL003",
+        "id_produto": "PROD003",
+        "nome_produto": "Tablet Samsung Galaxy",
+        "preco_unitario": 580.0,
+        "quantidade": 30,
+        "regiao": "Sudeste",
+        "valor_total": 17400.0,
+        "vendedor_responsavel": "Pedro Santos"
+      },
+      {
+        "cidade_filial": "Salvador",
+        "cliente_lojista": "MegaTech Loja",
+        "data_venda": "10/02/2024",
+        "estado": "BA",
+        "id_filial": "FIL004",
+        "id_produto": "PROD004",
+        "nome_produto": "Smartphone Xiaomi Redmi",
+        "preco_unitario": 850.0,
+        "quantidade": 40,
+        "regiao": "Nordeste",
+        "valor_total": 34000.0,
+        "vendedor_responsavel": "Maria Silva"
+      },
+      {
+        "cidade_filial": "Sao Paulo",
+        "cliente_lojista": "TechMundo Informatica",
+        "data_venda": "18/02/2024",
+        "estado": "SP",
+        "id_filial": "FIL001",
+        "id_produto": "PROD005",
+        "nome_produto": "Monitor LG 24 UltraWide",
+        "preco_unitario": 320.0,
+        "quantidade": 50,
+        "regiao": "Sudeste",
+        "valor_total": 16000.0,
+        "vendedor_responsavel": "Carlos Mendes"
+      }
+    ],
+    "total_registros": 78
+  },
+  "estoque": {
+    "Desktop HP Pavilion": {
+      "atual": 8,
+      "margem": "30.0%",
+      "minimo": 15,
+      "preco_varejo": "R$ 1,500.00",
+      "status": "CR\u00cdTICO",
+      "valor_estoque": "R$ 12,000.00"
+    },
+    "HD Externo Seagate 1TB": {
+      "atual": 45,
+      "margem": "45.0%",
+      "minimo": 30,
+      "preco_varejo": "R$ 320.00",
+      "status": "OK",
+      "valor_estoque": "R$ 14,400.00"
+    },
+    "Impressora HP LaserJet": {
+      "atual": 12,
+      "margem": "35.0%",
+      "minimo": 20,
+      "preco_varejo": "R$ 890.00",
+      "status": "CR\u00cdTICO",
+      "valor_estoque": "R$ 10,680.00"
+    },
+    "Monitor LG 24 UltraWide": {
+      "atual": 45,
+      "margem": "35.0%",
+      "minimo": 40,
+      "preco_varejo": "R$ 450.00",
+      "status": "OK",
+      "valor_estoque": "R$ 20,250.00"
+    },
+    "Mouse Logitech MX Master": {
+      "atual": 78,
+      "margem": "45.0%",
+      "minimo": 30,
+      "preco_varejo": "R$ 180.00",
+      "status": "OK",
+      "valor_estoque": "R$ 14,040.00"
+    },
+    "Notebook Dell Inspiron 15": {
+      "atual": 15,
+      "margem": "25.0%",
+      "minimo": 20,
+      "preco_varejo": "R$ 2,800.00",
+      "status": "CR\u00cdTICO",
+      "valor_estoque": "R$ 42,000.00"
+    },
+    "Roteador TP-Link Archer": {
+      "atual": 68,
+      "margem": "50.0%",
+      "minimo": 25,
+      "preco_varejo": "R$ 280.00",
+      "status": "OK",
+      "valor_estoque": "R$ 19,040.00"
+    },
+    "Smartphone Xiaomi Redmi": {
+      "atual": 62,
+      "margem": "40.0%",
+      "minimo": 30,
+      "preco_varejo": "R$ 1,200.00",
+      "status": "OK",
+      "valor_estoque": "R$ 74,400.00"
+    },
+    "Tablet Samsung Galaxy": {
+      "atual": 35,
+      "margem": "35.0%",
+      "minimo": 25,
+      "preco_varejo": "R$ 800.00",
+      "status": "OK",
+      "valor_estoque": "R$ 28,000.00"
+    },
+    "Teclado Logitech MX Keys": {
+      "atual": 89,
+      "margem": "40.0%",
+      "minimo": 50,
+      "preco_varejo": "R$ 120.00",
+      "status": "OK",
+      "valor_estoque": "R$ 10,680.00"
+    }
+  },
+  "kpis": {
+    "arquivos_carregados": 4,
+    "colunas_detectadas": "valor_total, cidade_filial, nome_produto",
+    "ticket_medio": "R$ 12,761.38",
+    "total_transacoes": 58,
+    "total_vendas": "R$ 740,160.00",
+    "valor_estoque": "R$ 245,490.00"
+  },
+  "metas_vs_vendas": {
+    "Belo Horizonte": {
+      "diferenca": "R$ 12,484.50",
+      "meta": "R$ 70,745.50",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 83,230.00"
+    },
+    "Brasilia": {
+      "diferenca": "R$ 1,470.00",
+      "meta": "R$ 8,330.00",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 9,800.00"
+    },
+    "Curitiba": {
+      "diferenca": "R$ 14,361.00",
+      "meta": "R$ 81,379.00",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 95,740.00"
+    },
+    "Fortaleza": {
+      "diferenca": "R$ 7,180.50",
+      "meta": "R$ 40,689.50",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 47,870.00"
+    },
+    "Goiania": {
+      "diferenca": "R$ 13,185.00",
+      "meta": "R$ 74,715.00",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 87,900.00"
+    },
+    "Porto Alegre": {
+      "diferenca": "R$ 9,697.50",
+      "meta": "R$ 54,952.50",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 64,650.00"
+    },
+    "Recife": {
+      "diferenca": "R$ 1,738.50",
+      "meta": "R$ 9,851.50",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 11,590.00"
+    },
+    "Rio de Janeiro": {
+      "diferenca": "R$ 13,854.00",
+      "meta": "R$ 78,506.00",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 92,360.00"
+    },
+    "Salvador": {
+      "diferenca": "R$ 15,534.00",
+      "meta": "R$ 88,026.00",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 103,560.00"
+    },
+    "Sao Paulo": {
+      "diferenca": "R$ 21,519.00",
+      "meta": "R$ 121,941.00",
+      "percentual": "117.6%",
+      "status": "ATINGIDA",
+      "vendas": "R$ 143,460.00"
+    }
+  },
+  "sazonalidade": {
+    "01/2024": "R$ 88,700.00",
+    "02/2024": "R$ 107,660.00",
+    "03/2024": "R$ 31,560.00",
+    "04/2024": "R$ 46,560.00",
+    "05/2024": "R$ 98,390.00",
+    "06/2024": "R$ 110,480.00",
+    "07/2024": "R$ 149,540.00",
+    "08/2024": "R$ 93,270.00",
+    "09/2024": "R$ 14,000.00"
+  },
+  "success": true,
+  "todos_produtos": [
+    [
+      "Notebook Dell Inspiron 15",
+      {
+        "preco_unitario": "R$ 2,800.00",
+        "quantidade": 115,
+        "transacoes": 9,
+        "vendas": "R$ 250,600.00"
+      }
+    ],
+    [
+      "Smartphone Xiaomi Redmi",
+      {
+        "preco_unitario": "R$ 1,200.00",
+        "quantidade": 136,
+        "transacoes": 6,
+        "vendas": "R$ 120,150.00"
+      }
+    ],
+    [
+      "Tablet Samsung Galaxy",
+      {
+        "preco_unitario": "R$ 800.00",
+        "quantidade": 135,
+        "transacoes": 6,
+        "vendas": "R$ 80,940.00"
+      }
+    ],
+    [
+      "Desktop HP Pavilion",
+      {
+        "preco_unitario": "R$ 1,500.00",
+        "quantidade": 66,
+        "transacoes": 6,
+        "vendas": "R$ 74,600.00"
+      }
+    ],
+    [
+      "Monitor LG 24 UltraWide",
+      {
+        "preco_unitario": "R$ 450.00",
+        "quantidade": 178,
+        "transacoes": 6,
+        "vendas": "R$ 59,300.00"
+      }
+    ],
+    [
+      "Impressora HP LaserJet",
+      {
+        "preco_unitario": "R$ 890.00",
+        "quantidade": 55,
+        "transacoes": 5,
+        "vendas": "R$ 36,470.00"
+      }
+    ],
+    [
+      "Mouse Logitech MX Master",
+      {
+        "preco_unitario": "R$ 180.00",
+        "quantidade": 283,
+        "transacoes": 6,
+        "vendas": "R$ 35,160.00"
+      }
+    ],
+    [
+      "HD Externo Seagate 1TB",
+      {
+        "preco_unitario": "R$ 320.00",
+        "quantidade": 151,
+        "transacoes": 4,
+        "vendas": "R$ 33,470.00"
+      }
+    ],
+    [
+      "Teclado Logitech MX Keys",
+      {
+        "preco_unitario": "R$ 120.00",
+        "quantidade": 365,
+        "transacoes": 6,
+        "vendas": "R$ 32,250.00"
+      }
+    ],
+    [
+      "Roteador TP-Link Archer",
+      {
+        "preco_unitario": "R$ 280.00",
+        "quantidade": 89,
+        "transacoes": 4,
+        "vendas": "R$ 17,220.00"
+      }
+    ]
+  ],
+  "top_produtos": {
+    "Desktop HP Pavilion": "R$ 74,600.00 (66 un)",
+    "Monitor LG 24 UltraWide": "R$ 59,300.00 (178 un)",
+    "Notebook Dell Inspiron 15": "R$ 250,600.00 (115 un)",
+    "Smartphone Xiaomi Redmi": "R$ 120,150.00 (136 un)",
+    "Tablet Samsung Galaxy": "R$ 80,940.00 (135 un)"
+  },
+  "top_vendedores": {
+    "Ana Rodrigues": "R$ 78,800.00",
+    "Carlos Mendes": "R$ 115,300.00",
+    "Fernando Lima": "R$ 87,900.00",
+    "Lucas Oliveira": "R$ 91,100.00",
+    "Maria Silva": "R$ 94,640.00"
+  },
+  "vendas_por_regiao": {
+    "Belo Horizonte": "R$ 83,230.00",
+    "Brasilia": "R$ 9,800.00",
+    "Curitiba": "R$ 95,740.00",
+    "Fortaleza": "R$ 47,870.00",
+    "Goiania": "R$ 87,900.00",
+    "Outros": "R$ 0.00",
+    "Porto Alegre": "R$ 64,650.00",
+    "Recife": "R$ 11,590.00",
+    "Rio de Janeiro": "R$ 92,360.00",
+    "Salvador": "R$ 103,560.00",
+    "Sao Paulo": "R$ 143,460.00"
+  }
+}

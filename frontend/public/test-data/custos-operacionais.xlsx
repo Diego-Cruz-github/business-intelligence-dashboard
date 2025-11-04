@@ -1,0 +1,106 @@
+{
+  "worksheets": [
+    {
+      "name": "Custos Fixos Mensais",
+      "data": [
+        ["Centro de Custo", "Categoria", "Subcategoria", "Valor Mensal", "Fornecedor", "Vencimento", "Status", "Observações"],
+        ["TI - Infraestrutura", "Tecnologia", "Cloud Computing", 15800, "AWS Brasil", "Todo dia 15", "Ativo", "Instâncias EC2 + RDS + S3"],
+        ["TI - Infraestrutura", "Tecnologia", "Software Licenses", 8900, "Microsoft", "Todo dia 5", "Ativo", "Office 365 + Azure AD"],
+        ["TI - Infraestrutura", "Tecnologia", "Monitoramento", 2400, "DataDog", "Todo dia 10", "Ativo", "APM + Logs + Infrastructure"],
+        ["TI - Infraestrutura", "Tecnologia", "CDN", 1850, "Cloudflare", "Todo dia 20", "Ativo", "Enterprise Plan"],
+        ["Administrativo", "Facilities", "Aluguel", 45000, "Brookfield Properties", "Todo dia 1", "Ativo", "Escritório São Paulo - 500m²"],
+        ["Administrativo", "Facilities", "Energia Elétrica", 3200, "Enel SP", "Todo dia 25", "Ativo", "Consumo médio 2.500 kWh"],
+        ["Administrativo", "Facilities", "Internet", 1200, "Vivo Empresas", "Todo dia 15", "Ativo", "Fibra 1Gbps dedicado"],
+        ["Administrativo", "Facilities", "Telefonia", 890, "Vivo", "Todo dia 8", "Ativo", "50 ramais VoIP"],
+        ["RH - Folha", "Pessoal", "Salários", 285000, "Interno", "Todo dia 5", "Ativo", "45 colaboradores"],
+        ["RH - Folha", "Pessoal", "Benefícios", 42750, "Múltiplos", "Todo dia 10", "Ativo", "VR + VT + Plano Saúde"],
+        ["RH - Folha", "Pessoal", "FGTS + INSS", 85500, "Governo", "Todo dia 20", "Ativo", "Encargos sociais"],
+        ["Marketing", "Publicidade", "Google Ads", 25000, "Google", "Todo dia 1", "Ativo", "Search + Display + YouTube"],
+        ["Marketing", "Publicidade", "Facebook Ads", 18500, "Meta", "Todo dia 5", "Ativo", "Facebook + Instagram"],
+        ["Marketing", "Publicidade", "LinkedIn Ads", 12000, "LinkedIn", "Todo dia 10", "Ativo", "B2B Lead Generation"],
+        ["Marketing", "Tools", "HubSpot", 3600, "HubSpot", "Todo dia 15", "Ativo", "CRM + Marketing Automation"],
+        ["Marketing", "Tools", "Mailchimp", 890, "Mailchimp", "Todo dia 3", "Ativo", "Email Marketing"],
+        ["Vendas", "Comissões", "Comissões Vendas", 95000, "Interno", "Todo dia 15", "Variável", "8% sobre vendas realizadas"],
+        ["Vendas", "Tools", "Salesforce", 4500, "Salesforce", "Todo dia 20", "Ativo", "Professional + Sales Cloud"],
+        ["Vendas", "Tools", "Zoom", 450, "Zoom", "Todo dia 25", "Ativo", "Business Plan - 100 licenses"],
+        ["Financeiro", "Serviços", "Contabilidade", 8500, "Deloitte", "Todo dia 30", "Ativo", "Consultoria contábil completa"],
+        ["Financeiro", "Serviços", "Auditoria", 12000, "KPMG", "Trimestral", "Ativo", "Auditoria externa"],
+        ["Financeiro", "Banking", "Tarifas Bancárias", 2800, "Itaú", "Mensal", "Ativo", "Conta corrente + operações"],
+        ["Jurídico", "Serviços", "Advocacia", 15000, "Machado Meyer", "Todo dia 10", "Ativo", "Consultoria jurídica geral"],
+        ["Operações", "Logística", "Correios", 3400, "Correios", "Todo dia 20", "Ativo", "Entregas nacionais"],
+        ["Operações", "Logística", "Transportadora", 5600, "Loggi", "Todo dia 15", "Ativo", "Same day delivery SP"],
+        ["Seguros", "Proteção", "Seguro Empresarial", 4200, "Porto Seguro", "Anual", "Ativo", "Cobertura completa"],
+        ["Seguros", "Proteção", "Seguro Cyber", 2800, "AIG", "Anual", "Ativo", "Proteção dados + cyber attacks"]
+      ]
+    },
+    {
+      "name": "Custos Variáveis",
+      "data": [
+        ["Data", "Categoria", "Descrição", "Quantidade", "Valor Unitário", "Valor Total", "Fornecedor", "Centro Custo", "Aprovador"],
+        ["2024-11-01", "Marketing", "Campanha Black Friday - Facebook", 1, 35000, 35000, "Meta Advertising", "Marketing", "Maria Silva"],
+        ["2024-11-01", "TI", "Servidor adicional AWS", 30, 850, 25500, "Amazon Web Services", "TI", "João Santos"],
+        ["2024-11-01", "Vendas", "Comissão vendedor top", 1, 15000, 15000, "Interno", "Vendas", "Carlos Lima"],
+        ["2024-11-01", "Operações", "Horas extras desenvolvimento", 120, 85, 10200, "Interno", "TI", "Ana Costa"],
+        ["2024-11-02", "Marketing", "Produção vídeo institucional", 1, 28000, 28000, "Produtora XYZ", "Marketing", "Pedro Oliveira"],
+        ["2024-11-02", "TI", "Licenças temporárias Adobe", 15, 240, 3600, "Adobe Systems", "TI", "Julia Mendes"],
+        ["2024-11-02", "Facilities", "Manutenção ar condicionado", 1, 4500, 4500, "Springer Carrier", "Administrativo", "Rafael Torres"],
+        ["2024-11-02", "RH", "Recrutamento especialista", 1, 8500, 8500, "Michael Page", "RH", "Fernanda Castro"],
+        ["2024-11-02", "Vendas", "Evento participação feira", 1, 12000, 12000, "Reed Exhibitions", "Vendas", "Lucas Rocha"],
+        ["2024-11-02", "TI", "Consultoria segurança", 40, 300, 12000, "Cipher Security", "TI", "Camila Souza"]
+      ]
+    },
+    {
+      "name": "Análise Custo-Benefício",
+      "data": [
+        ["Iniciativa", "Tipo", "Investimento", "Benefício Mensal", "ROI %", "Payback (meses)", "Status", "Responsável"],
+        ["Automação Marketing", "Tecnologia", 45000, 12000, 32.0, 3.8, "Em Andamento", "Maria Silva"],
+        ["CRM Upgrade", "Tecnologia", 35000, 8500, 29.1, 4.1, "Planejado", "Carlos Lima"],
+        ["Chat Bot Atendimento", "Tecnologia", 18000, 5200, 34.7, 3.5, "Em Andamento", "Ana Costa"],
+        ["Treinamento Vendas", "Capacitação", 25000, 15000, 72.0, 1.7, "Concluído", "Pedro Oliveira"],
+        ["Otimização Cloud", "Infraestrutura", 12000, 4800, 48.0, 2.5, "Em Andamento", "João Santos"],
+        ["Sistema BI Avançado", "Analytics", 85000, 22000, 31.1, 3.9, "Proposta", "Julia Mendes"],
+        ["Migração Microserviços", "Arquitetura", 120000, 18000, 18.0, 6.7, "Avaliação", "Rafael Torres"],
+        ["Programa Fidelidade", "Marketing", 65000, 28000, 51.7, 2.3, "Piloto", "Fernanda Castro"]
+      ]
+    },
+    {
+      "name": "Budget vs Real",
+      "data": [
+        ["Categoria", "Budget Anual", "Realizado YTD", "% Executado", "Projeção Ano", "Variação %", "Status", "Justificativa"],
+        ["Salários + Encargos", 4200000, 3850000, 91.7, 4620000, 10.0, "Acima", "Contratações não previstas"],
+        ["Marketing Digital", 720000, 580000, 80.6, 696000, -3.3, "Dentro", "Performance dentro do esperado"],
+        ["Cloud + TI", 420000, 385000, 91.7, 462000, 10.0, "Acima", "Crescimento usuários"],
+        ["Facilities", 600000, 545000, 90.8, 654000, 9.0, "Acima", "Aumento custos energia"],
+        ["Vendas + Comissões", 1380000, 1250000, 90.6, 1500000, 8.7, "Acima", "Superação metas vendas"],
+        ["Serviços Terceiros", 480000, 385000, 80.2, 462000, -3.8, "Dentro", "Negociação melhores contratos"],
+        ["Logística", 240000, 195000, 81.3, 234000, -2.5, "Dentro", "Otimização rotas entrega"],
+        ["Seguros", 84000, 77000, 91.7, 92400, 10.0, "Acima", "Novos seguros cyber"],
+        ["Contingência", 300000, 125000, 41.7, 150000, -50.0, "Abaixo", "Reserva para oportunidades"]
+      ]
+    },
+    {
+      "name": "Indicadores Custo",
+      "data": [
+        ["Indicador", "Valor Atual", "Meta", "Período Anterior", "Tendência", "Benchmark Setor"],
+        ["Custo por Cliente Adquirido (CAC)", 1250, 1500, 1380, "↘️ Melhorando", 1650],
+        ["Custo por Lead Qualificado", 85, 100, 92, "↘️ Melhorando", 120],
+        ["Custo por Receita (% Revenue)", 68.5, 70.0, 71.2, "↘️ Melhorando", 72.0],
+        ["Custo por Funcionário/Mês", 18500, 20000, 19200, "↘️ Melhorando", 22000],
+        ["Custo Tecnologia/Receita %", 12.3, 15.0, 13.1, "↘️ Melhorando", 18.0],
+        ["Eficiência Marketing (ROAS)", 4.2, 3.5, 3.8, "↗️ Melhorando", 3.2],
+        ["Custo Operacional/Transação", 12.50, 15.00, 14.20, "↘️ Melhorando", 18.50],
+        ["% Custos Fixos vs Variáveis", 75, 70, 78, "↘️ Melhorando", 80],
+        ["Produtividade/Funcionário", 185000, 175000, 178000, "↗️ Melhorando", 165000]
+      ]
+    }
+  ],
+  "metadata": {
+    "created": "2024-11-02T15:00:00Z",
+    "lastUpdate": "2024-11-02T15:30:00Z",
+    "source": "ERP Financeiro + Controladoria",
+    "currency": "BRL",
+    "period": "2024",
+    "department": "Controladoria Financeira",
+    "access_level": "C-Level + Finance Team"
+  }
+}

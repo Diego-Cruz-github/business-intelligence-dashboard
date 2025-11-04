@@ -1,0 +1,74 @@
+{
+  "canais": {},
+  "dados_raw": {
+    "preview": [
+      {
+        "cidade": "Sao Paulo",
+        "estado": "SP",
+        "gerente_responsavel": "Carlos Mendes",
+        "id_filial": "FIL001",
+        "meta_mensal": 121941.0,
+        "nome_filial": "TechFlow SP Central",
+        "regiao": "Sudeste",
+        "tipo_operacao": "Atacado + Varejo"
+      },
+      {
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "gerente_responsavel": "Ana Rodrigues",
+        "id_filial": "FIL002",
+        "meta_mensal": 78506.0,
+        "nome_filial": "TechFlow RJ Barra",
+        "regiao": "Sudeste",
+        "tipo_operacao": "Atacado + Varejo"
+      },
+      {
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "gerente_responsavel": "Pedro Santos",
+        "id_filial": "FIL003",
+        "meta_mensal": 70745.5,
+        "nome_filial": "TechFlow BH Norte",
+        "regiao": "Sudeste",
+        "tipo_operacao": "Atacado + Varejo"
+      },
+      {
+        "cidade": "Salvador",
+        "estado": "BA",
+        "gerente_responsavel": "Maria Silva",
+        "id_filial": "FIL004",
+        "meta_mensal": 88026.0,
+        "nome_filial": "TechFlow Salvador Centro",
+        "regiao": "Nordeste",
+        "tipo_operacao": "Atacado + Varejo"
+      },
+      {
+        "cidade": "Recife",
+        "estado": "PE",
+        "gerente_responsavel": "Joao Lima",
+        "id_filial": "FIL005",
+        "meta_mensal": 9851.5,
+        "nome_filial": "TechFlow Recife Shopping",
+        "regiao": "Nordeste",
+        "tipo_operacao": "Varejo"
+      }
+    ],
+    "total_registros": 10
+  },
+  "estoque": {},
+  "kpis": {
+    "arquivos_carregados": 1,
+    "colunas_detectadas": "None, cidade, None",
+    "ticket_medio": "R$ 0.00",
+    "total_transacoes": 0,
+    "total_vendas": "R$ 0.00",
+    "valor_estoque": "R$ 0.00"
+  },
+  "metas_vs_vendas": {},
+  "sazonalidade": {},
+  "success": true,
+  "todos_produtos": {},
+  "top_produtos": {},
+  "top_vendedores": {},
+  "vendas_por_regiao": {}
+}

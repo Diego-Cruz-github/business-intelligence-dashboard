@@ -1,0 +1,250 @@
+{
+  "version": "2.0",
+  "dataModel": {
+    "name": "Análise Comercial Completa",
+    "tables": [
+      {
+        "name": "Vendas_Detalhadas",
+        "columns": [
+          {"name": "ID_Venda", "dataType": "Int64", "isKey": true},
+          {"name": "Data_Venda", "dataType": "DateTime"},
+          {"name": "ID_Cliente", "dataType": "Int64"},
+          {"name": "Nome_Cliente", "dataType": "String"},
+          {"name": "Segmento_Cliente", "dataType": "String"},
+          {"name": "ID_Produto", "dataType": "String"},
+          {"name": "Nome_Produto", "dataType": "String"},
+          {"name": "Categoria", "dataType": "String"},
+          {"name": "Subcategoria", "dataType": "String"},
+          {"name": "Quantidade", "dataType": "Int64"},
+          {"name": "Valor_Unitario", "dataType": "Decimal"},
+          {"name": "Valor_Total", "dataType": "Decimal"},
+          {"name": "Custo_Produto", "dataType": "Decimal"},
+          {"name": "Margem_Lucro", "dataType": "Decimal"},
+          {"name": "Desconto_Aplicado", "dataType": "Decimal"},
+          {"name": "Vendedor", "dataType": "String"},
+          {"name": "Regiao_Venda", "dataType": "String"},
+          {"name": "Canal_Venda", "dataType": "String"},
+          {"name": "Status_Venda", "dataType": "String"}
+        ],
+        "measures": [
+          {
+            "name": "Total_Receita",
+            "expression": "SUM(Vendas_Detalhadas[Valor_Total])",
+            "formatString": "\"R$ \"#,##0.00"
+          },
+          {
+            "name": "Total_Lucro",
+            "expression": "SUM(Vendas_Detalhadas[Valor_Total]) - SUM(Vendas_Detalhadas[Custo_Produto])",
+            "formatString": "\"R$ \"#,##0.00"
+          },
+          {
+            "name": "Margem_Percentual",
+            "expression": "DIVIDE([Total_Lucro], [Total_Receita], 0)",
+            "formatString": "0.00%"
+          },
+          {
+            "name": "Ticket_Medio",
+            "expression": "AVERAGE(Vendas_Detalhadas[Valor_Total])",
+            "formatString": "\"R$ \"#,##0.00"
+          },
+          {
+            "name": "Qtd_Vendas",
+            "expression": "COUNTROWS(Vendas_Detalhadas)",
+            "formatString": "#,##0"
+          }
+        ]
+      },
+      {
+        "name": "Clientes_Ativos",
+        "columns": [
+          {"name": "ID_Cliente", "dataType": "Int64", "isKey": true},
+          {"name": "Nome_Cliente", "dataType": "String"},
+          {"name": "Email", "dataType": "String"},
+          {"name": "Telefone", "dataType": "String"},
+          {"name": "Data_Cadastro", "dataType": "DateTime"},
+          {"name": "Data_Ultima_Compra", "dataType": "DateTime"},
+          {"name": "Segmento", "dataType": "String"},
+          {"name": "Score_Credito", "dataType": "Int64"},
+          {"name": "Valor_Total_Compras", "dataType": "Decimal"},
+          {"name": "Frequencia_Compras", "dataType": "Int64"},
+          {"name": "Status_Cliente", "dataType": "String"},
+          {"name": "Origem_Cliente", "dataType": "String"},
+          {"name": "CEP", "dataType": "String"},
+          {"name": "Cidade", "dataType": "String"},
+          {"name": "Estado", "dataType": "String"},
+          {"name": "Regiao", "dataType": "String"}
+        ],
+        "measures": [
+          {
+            "name": "Clientes_Ativos_Total",
+            "expression": "COUNTROWS(FILTER(Clientes_Ativos, Clientes_Ativos[Status_Cliente] = \"Ativo\"))",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "LTV_Medio",
+            "expression": "AVERAGE(Clientes_Ativos[Valor_Total_Compras])",
+            "formatString": "\"R$ \"#,##0.00"
+          },
+          {
+            "name": "NPS_Score",
+            "expression": "72",
+            "formatString": "0"
+          }
+        ]
+      },
+      {
+        "name": "Marketing_Performance",
+        "columns": [
+          {"name": "Data_Campanha", "dataType": "DateTime"},
+          {"name": "Nome_Campanha", "dataType": "String"},
+          {"name": "Canal_Marketing", "dataType": "String"},
+          {"name": "Tipo_Campanha", "dataType": "String"},
+          {"name": "Investimento", "dataType": "Decimal"},
+          {"name": "Impressoes", "dataType": "Int64"},
+          {"name": "Clicks", "dataType": "Int64"},
+          {"name": "CTR", "dataType": "Decimal"},
+          {"name": "Conversoes", "dataType": "Int64"},
+          {"name": "Taxa_Conversao", "dataType": "Decimal"},
+          {"name": "CPC", "dataType": "Decimal"},
+          {"name": "CPM", "dataType": "Decimal"},
+          {"name": "ROAS", "dataType": "Decimal"},
+          {"name": "Leads_Gerados", "dataType": "Int64"},
+          {"name": "Custo_Lead", "dataType": "Decimal"}
+        ]
+      },
+      {
+        "name": "Operacoes_Financeiras",
+        "columns": [
+          {"name": "Data_Operacao", "dataType": "DateTime"},
+          {"name": "Tipo_Operacao", "dataType": "String"},
+          {"name": "Categoria_Financeira", "dataType": "String"},
+          {"name": "Subcategoria", "dataType": "String"},
+          {"name": "Valor", "dataType": "Decimal"},
+          {"name": "Moeda", "dataType": "String"},
+          {"name": "Centro_Custo", "dataType": "String"},
+          {"name": "Responsavel", "dataType": "String"},
+          {"name": "Status_Aprovacao", "dataType": "String"},
+          {"name": "Metodo_Pagamento", "dataType": "String"},
+          {"name": "Fornecedor", "dataType": "String"},
+          {"name": "Numero_NF", "dataType": "String"},
+          {"name": "Observacoes", "dataType": "String"}
+        ]
+      },
+      {
+        "name": "Inventario_Produtos",
+        "columns": [
+          {"name": "ID_Produto", "dataType": "String", "isKey": true},
+          {"name": "Nome_Produto", "dataType": "String"},
+          {"name": "SKU", "dataType": "String"},
+          {"name": "Categoria", "dataType": "String"},
+          {"name": "Subcategoria", "dataType": "String"},
+          {"name": "Marca", "dataType": "String"},
+          {"name": "Fornecedor", "dataType": "String"},
+          {"name": "Preco_Custo", "dataType": "Decimal"},
+          {"name": "Preco_Venda", "dataType": "Decimal"},
+          {"name": "Estoque_Atual", "dataType": "Int64"},
+          {"name": "Estoque_Minimo", "dataType": "Int64"},
+          {"name": "Estoque_Maximo", "dataType": "Int64"},
+          {"name": "Status_Produto", "dataType": "String"},
+          {"name": "Data_Ultima_Venda", "dataType": "DateTime"},
+          {"name": "Giro_Estoque", "dataType": "Decimal"}
+        ]
+      },
+      {
+        "name": "Analytics_Website",
+        "columns": [
+          {"name": "Data_Evento", "dataType": "DateTime"},
+          {"name": "Hora_Evento", "dataType": "Time"},
+          {"name": "Sessao_ID", "dataType": "String"},
+          {"name": "Usuario_ID", "dataType": "String"},
+          {"name": "Pagina_URL", "dataType": "String"},
+          {"name": "Pagina_Titulo", "dataType": "String"},
+          {"name": "Evento_Tipo", "dataType": "String"},
+          {"name": "Dispositivo", "dataType": "String"},
+          {"name": "Navegador", "dataType": "String"},
+          {"name": "Sistema_Operacional", "dataType": "String"},
+          {"name": "Pais", "dataType": "String"},
+          {"name": "Cidade", "dataType": "String"},
+          {"name": "Origem_Trafego", "dataType": "String"},
+          {"name": "Canal_Aquisicao", "dataType": "String"},
+          {"name": "Tempo_Sessao", "dataType": "Int64"},
+          {"name": "Paginas_Vistas", "dataType": "Int64"},
+          {"name": "Conversao", "dataType": "Boolean"}
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "fromTable": "Vendas_Detalhadas",
+        "fromColumn": "ID_Cliente",
+        "toTable": "Clientes_Ativos",
+        "toColumn": "ID_Cliente",
+        "cardinality": "ManyToOne"
+      },
+      {
+        "fromTable": "Vendas_Detalhadas",
+        "fromColumn": "ID_Produto",
+        "toTable": "Inventario_Produtos",
+        "toColumn": "ID_Produto",
+        "cardinality": "ManyToOne"
+      }
+    ]
+  },
+  "sampleData": {
+    "vendas": [
+      {"ID_Venda": 1001, "Data_Venda": "2024-11-01", "Nome_Cliente": "TechCorp Solutions", "Segmento_Cliente": "Enterprise", "Nome_Produto": "Dashboard Pro License", "Categoria": "Software", "Quantidade": 50, "Valor_Total": 75000, "Margem_Lucro": 32.5, "Vendedor": "João Silva", "Regiao_Venda": "Sudeste", "Canal_Venda": "Direct Sales"},
+      {"ID_Venda": 1002, "Data_Venda": "2024-11-01", "Nome_Cliente": "DataFlow Inc", "Segmento_Cliente": "Mid-Market", "Nome_Produto": "Analytics Suite", "Categoria": "Software", "Quantidade": 25, "Valor_Total": 45000, "Margem_Lucro": 28.7, "Vendedor": "Maria Santos", "Regiao_Venda": "Sul", "Canal_Venda": "Partner"},
+      {"ID_Venda": 1003, "Data_Venda": "2024-11-02", "Nome_Cliente": "SmartBI Labs", "Segmento_Cliente": "SMB", "Nome_Produto": "Starter Package", "Categoria": "Software", "Quantidade": 100, "Valor_Total": 25000, "Margem_Lucro": 45.2, "Vendedor": "Carlos Lima", "Regiao_Venda": "Nordeste", "Canal_Venda": "Online"}
+    ],
+    "performance": {
+      "total_revenue": 2850000,
+      "total_profit": 1045000,
+      "profit_margin": 36.7,
+      "active_customers": 12847,
+      "churn_rate": 2.8,
+      "customer_satisfaction": 4.8,
+      "nps_score": 72,
+      "market_share": 15.3,
+      "growth_rate": 18.5
+    }
+  },
+  "visualizations": [
+    {
+      "type": "line_chart",
+      "title": "Revenue Trend - Last 12 Months",
+      "xAxis": "Month",
+      "yAxis": "Revenue",
+      "measures": ["Total_Receita", "Total_Lucro"]
+    },
+    {
+      "type": "bar_chart",
+      "title": "Sales by Region",
+      "xAxis": "Regiao_Venda",
+      "yAxis": "Total_Receita"
+    },
+    {
+      "type": "pie_chart",
+      "title": "Customer Segmentation",
+      "dimension": "Segmento_Cliente",
+      "measure": "Clientes_Ativos_Total"
+    },
+    {
+      "type": "kpi_cards",
+      "metrics": [
+        {"name": "Total Revenue", "value": "[Total_Receita]", "trend": "up"},
+        {"name": "Active Customers", "value": "[Clientes_Ativos_Total]", "trend": "up"},
+        {"name": "Profit Margin", "value": "[Margem_Percentual]", "trend": "stable"},
+        {"name": "NPS Score", "value": "[NPS_Score]", "trend": "up"}
+      ]
+    }
+  ],
+  "metadata": {
+    "created": "2024-11-02T10:30:00Z",
+    "lastModified": "2024-11-02T14:45:00Z",
+    "author": "DataHub Analytics Team",
+    "version": "1.2.5",
+    "dataSource": "SQL Server + Salesforce + Google Analytics",
+    "refreshSchedule": "Every 15 minutes",
+    "accessLevel": "Executive Dashboard"
+  }
+}

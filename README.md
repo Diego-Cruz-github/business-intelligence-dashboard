@@ -1,6 +1,8 @@
-# DataHub Business Intelligence Platform
+# Business Intelligence Dashboard
 
-A web-based business intelligence platform that processes multi-source CSV data and generates interactive dashboards with automated relationship detection and intelligent KPI calculations.
+A professional data visualization platform built with React and Flask, designed for enterprise-level business analytics and KPI monitoring.
+
+![Demo](demo.gif)
 
 ## Technical Overview
 
@@ -38,22 +40,24 @@ The platform implements an ETL pipeline with automatic data source correlation, 
 - **Interactive Components**: Implements drill-down capabilities and cross-filtering between dashboard elements
 - **Export Functionality**: Generates formatted reports in multiple output formats
 
-## Technology Stack
+## Tech Stack
 
-**Backend**
-```
-Python 3.8+
-Flask 2.3.x - Web framework
-Pandas 2.0+ - Data manipulation
-NumPy - Numerical computing
-```
+![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-2.x-000000?logo=flask&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3.x-06B6D4?logo=tailwindcss&logoColor=white)
+![ApexCharts](https://img.shields.io/badge/ApexCharts-3.x-008FFB?logo=chart.js&logoColor=white)
 
-**Frontend**
-```
-React 18 - UI framework
-Axios - HTTP client
-CSS3 - Styling and animations
-```
+## Key Features
+
+- **Real-time Data Processing**: CSV file upload with automatic schema detection
+- **Enterprise Dashboard**: 10+ professional KPI cards with advanced metrics
+- **Interactive Visualizations**: Dynamic charts using ApexCharts library
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Multi-channel Analytics**: Separate tracking for retail and wholesale operations
+- **Inventory Management**: Real-time stock monitoring with critical alerts
+- **Geographic Analysis**: Regional sales distribution and performance tracking
+- **Performance Metrics**: Sales targets vs actual performance comparison
 
 **Data Processing**
 ```
